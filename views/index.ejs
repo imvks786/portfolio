@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Welcome!</title>
+  <%- include('partials/header') %>
+</head>
+<body>
+  <!-- NAVIGATION BAR -->
+  <%- include('partials/navbar') %>
+  <!---------CONTENT AREA ---------->
+  <div class="container-fluid center" style="background-image: url('./images/bk.jpg');">
+    <br>
+    <br>
+    <br>
+    <img src="./images/img.jpg" class="profile_logo"/>
+    <br>
+    <br>
+    <h1 class="">Welcome to My Portfolio</h1>
+    <h2>I <span class="red">Design</span> and <span class="gr">Code</span> beautifully <span class="bl">simple</span> things, and I <span class="yl">love</span> what I do.</h2>
+    <br>
+  </div>
+
+  <br>
+  <br>
+
+  <!--------- ABOUT SECTION ------->
+  <div class="container c_border" id="about">
+    <br>
+    <h1>Who am I?</h1>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <div class="container profile_logo_content">
+            <img src="./images/img.jpg"  class="profile_logo_c"/>
+          </div>
+        </div>
+        <div class="col-sm">
+          <h1>Vivek Singh,</h1>
+          <p class="t_pos">I am a skilled web developer with expertise in both backend and frontend technologies. My experience includes developing personal projects using HTML, CSS, PHP, and MYSQL, which have allowed me to hone my skills in these areas.</p>
+          <p class="t_pos">If you would like to view some of my work, please feel free to visit my GitHub profile page at https://github.com/imvks786. Here you will find a collection of my projects that showcase my ability to develop functional and visually appealing web applications.</p>
+          <p class="t_pos">I am always seeking new opportunities to challenge myself and expand my knowledge in the field of web development. If you are interested in collaborating on a project or discussing potential opportunities, please do not hesitate to contact me.</p>
+          <p class="t_pos">Thank you for taking the time to view my profile, and I look forward to connecting with you soon.</p>
+        </div>
+      </div>
+    </div>
+
+    <br>
+  </div>
+  
+  <br>
+  <br>
+
+  <!--------- PROJECT SECTION ------->
+  <div class="container c_border" id="projects">
+    <h1 class="center">Projects</h1>
+    <p class="t_pos">In this section, I'm excited to showcase one of my most recent and innovative projects. These projects represents a culmination of my passion for programming, machine learning, and web developement. I designed and developed these projects using a combination of technologies, including <b>Python, Javascripts, PHP, Mysql and Front end technologies.</b></p>
+    <p class="t_pos">I'm proud of what I accomplished with [Project Title], and it represents just one example of my commitment to pushing the boundaries of technology. </p>
+    <br>
+    <br>
+    
+    <div class="row center">
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="./images/tablockx.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">TabLockX</h5>
+            <p class="card-text">TabLockX is a robust Chrome extension that empowers users to safeguard their sensitive information and maintain better control over their browsing experience.</p>
+            <a href="https://github.com/imvks786/TabLockX" class="btn btn-primary"><img class="svg_element" src="/images/git_white.svg" type="image/svg+xml"> See Project</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="./images/laptop.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">SmartSpecs</h5>
+            <p class="card-text">A laptop price predictor is built using machine learning. It is a system that utilizes machine earning algorithms to analyze historical data on laptop prices and predict future prices.</p>
+            <a href="https://github.com/imvks786/Laptop-Price-Predictor" class="btn btn-primary"><img class="svg_element" src="/images/git_white.svg" type="image/svg+xml"> See Project</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="https://user-images.githubusercontent.com/56357173/132630568-77461a54-e0ea-4ddb-aff8-6dd62fd0a117.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">BookMyBus</h5>
+            <p class="card-text">BookMyBus is web application that provides the user to book the bus according to availablity of seats on particular date and time. It have admin and user login panels.</p>
+            <a href="https://github.com/imvks786/BookmyBus" class="btn btn-primary"><img class="svg_element" src="/images/git_white.svg" type="image/svg+xml"> See Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <br>
+  </div>
+
+
+  <br>
+  <br>
+
+  <!--------- CONTACT SECTION ------->
+  <div class="container c_border" id="contact">
+    <h1 class="center">Connect With me!</h1>
+    <h2  class="center">Have a question or want to work together?</h2>
+        <div class="container align-items-center col-md-6">
+          <br>
+          <form>
+            <div class="form-row">
+              <div class="form-group col">
+                <label for="inputEmail4">Your Email</label>
+                <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+              </div>
+              <br>
+              <div class="form-group col">
+                <label for="inputPassword4">Your Name</label>
+                <input type="text" class="form-control" id="inputPassword4" placeholder="Name">
+              </div>
+              <br>
+              <div class="form-group col">
+                <label for="inputmsg">Message</label>
+                <input type="text" class="form-control" id="inputmsg" placeholder="Hi, I like to connect with you..">
+              </div>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary cust_btn">Send Message &nbsp;<span class="material-symbols-outlined c_icon">send</span></button>
+          </form>
+          <br>
+    </div>
+  </div>
+
+  <br>
+  <br>
+
+  <!--------- RESUME SECTION ------->
+  <div class="container c_border" id="resume">
+    <br>
+    <h1 class="center">Get Resume</h1>
+    <p>Welcome to my professional resume section. Below, you'll find a comprehensive overview of my education, work experience, and key achievements. Feel free to download the PDF version for a more detailed look at my credentials.</p>
+    <p>Feel free to explore my full resume by downloading the PDF version below. If you have any questions or would like to discuss potential opportunities, please don't hesitate to contact me through the provided channels.</p>
+    <a href="https://drive.google.com/file/d/17bFblECmK4zddd6fz2EB4i9jU7zYA80I/view?usp=sharing" target="_blank" class="btn btn-primary cust_btn">See Resume &nbsp;<span class="material-symbols-outlined c_icon">arrow_right_alt</span></a>
+    <br>
+    <br>
+  </div>
+  
+  <br>
+  <br>
+
+
+
+
+  <!-- Footer section -->
+  <%- include('partials/footer') %>
+  <div id="alert"><span style="display: flex;align-items: center;"><span id="usrmsg">This action is not allowed right now.</span></span></div>
+  <div id="content" style="display: none;"><button id="fullscreenButton">Fullscreen</button><h1>WELCOME</h1></div>
+  <script src="/scripts/script.js"></script>
+</body>
+</html>
