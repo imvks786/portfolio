@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Welcome!</title>
+  <%- include('partials/header') %>
+</head>
+<body>
+  <!-- NAVIGATION BAR -->
+  <%- include('partials/navbar') %>
+
+
+  <div class="container">
+    <h1>About me</h1>
+    <br>
+  </div>
+
+
+  <!-- Footer section -->
+  <%- include('partials/footer') %>
+
+  <div id="alert"><span style="display: flex;align-items: center;"><span id="usrmsg">This action is not allowed right now.</span></span></div>
+  <div id="content" style="display: none;"><button id="fullscreenButton">Fullscreen</button><h1>WELCOME</h1></div>
+  <script src="/scripts/script.js"></script>
+</body>
+</html>
