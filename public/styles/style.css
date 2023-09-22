@@ -1,0 +1,165 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+#alert {
+  border: 1px solid white;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: #35363a;
+  color: white;
+  position: absolute;
+  bottom: 10%;
+  animation: 0.5s fadeInUp;
+  display: none;
+}
+
+#usrmsg {
+  padding: 10px 10px 0px 10px;
+}
+
+.social{
+  align-items: center;
+  position: relative;
+  display: flex;
+  text-align: center;
+}
+
+.social_text{
+  font-size: 17px;
+  font-weight: 500;
+}
+
+
+.social_link:first-child {
+  margin-left: 10px;
+}
+
+
+
+/* SCROLL BAR FIX */
+/* Hide the scrollbar */
+::-webkit-scrollbar {
+  width: 0em; /* Adjust the width as needed */
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; /* Make the track transparent */
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the scrollbar handle */
+  border-radius: 2px; /* Rounded corners for the scrollbar handle */
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Color change on hover */
+}
+
+
+.card:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4); /* Customize the shadow properties */
+}
+.card-text{
+  text-align: justify;
+}
+.center{
+  text-align: center;
+  align-items: center;
+}
+
+.profile_logo{
+  box-shadow: 1px 4px 4px 1px rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  border: 1px solid black;
+  height: 150px;
+  width: 150px;
+}
+
+.logo{
+  height: 25px;
+  width: 45px;
+}
+
+.line{
+  height: 40px;
+  width: 1px;
+  border: 1px solid black;
+  margin-left: 10px;
+}
+
+.card-img-top{
+  height: 240px;
+  width: 286px;
+}
+
+.red{
+  color:red;
+}
+.gr{
+  color:green;
+}
+.bl{
+  color:rgb(56, 102, 255);
+}
+.yl{
+  color:rgb(255, 191, 42);
+}
+
+
+.c_icon{
+  align-items: center;
+  position: absolute;
+}
+.cust_btn{
+  width: 190px;
+}
+.cust_btn:hover{
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.4);
+}
+.btn:hover{
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.4);
+}
+
+
+
+.t_pos{
+  text-align: justify;
+}
+
+.profile_logo_content{
+  margin-top: 100px;
+  margin-left: 100px;
+  align-items: center;
+}
+
+.profile_logo_c{
+  box-shadow: 1px 4px 4px 1px rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  border: 1px solid black;
+  height: 200px;
+  width: 200px;
+}
+
+.c_border{
+  border:1px solid rgb(210 210 210);
+  border-radius: 15px;
+}
+
+
+.nav_bar_fix{
+  z-index: 1 !important;
+  position: fixed;
+  width: 100%;
+}
