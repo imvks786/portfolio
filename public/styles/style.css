@@ -24,7 +24,6 @@
   animation: 0.5s fadeInUp;
   display: none;
 }
-
 #usrmsg {
   padding: 10px 10px 0px 10px;
 }
@@ -35,13 +34,10 @@
   display: flex;
   text-align: center;
 }
-
 .social_text{
   font-size: 17px;
   font-weight: 500;
 }
-
-
 .social_link:first-child {
   margin-left: 10px;
 }
@@ -49,27 +45,23 @@
 
 
 /* SCROLL BAR FIX */
-/* Hide the scrollbar */
 ::-webkit-scrollbar {
-  width: 0em; /* Adjust the width as needed */
+  width: 0em;
 }
-/* Track */
 ::-webkit-scrollbar-track {
-  background: transparent; /* Make the track transparent */
+  background: transparent;
 }
-/* Handle */
 ::-webkit-scrollbar-thumb {
-  background-color: #888; /* Color of the scrollbar handle */
-  border-radius: 2px; /* Rounded corners for the scrollbar handle */
+  background-color: #888;
+  border-radius: 2px;
 }
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #555; /* Color change on hover */
+  background-color: #555;
 }
 
 
 .card:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4); /* Customize the shadow properties */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
 }
 .card-text{
   text-align: justify;
@@ -162,4 +154,105 @@
   z-index: 1 !important;
   position: fixed;
   width: 100%;
+}
+
+body, ul {
+  margin: 0;
+  padding: 0;
+}
+
+
+.navbar {
+  background-color:white;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around; /* Horizontally center the list items */
+  padding: 10px 0; /* Add some spacing above and below the list */
+}
+.navbar ul li a {
+  text-decoration: none; /* Remove underlines from links */
+  color: black; /* Text color of the links */
+  font-size: 16px;
+  padding: 10px 20px; /* Add spacing around each link */
+}
+/* .navbar ul li a:hover {
+  background-color: #555;
+} */
+
+
+@media only screen and (max-width:1200px){
+  #nav_items{
+    display: none;
+  }
+  .line{
+    /* display:none; */
+  }
+  .logo{
+    
+  }  
+  .nav_logo{
+    text-align: center; 
+    flex: 1; 
+  }
+  .profile_logo_content{
+    display: none;
+  }
+  .c_border{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .logo_hide{
+    display: none;
+  }
+  .full{
+    width:100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #nav_items{
+    display: none;
+  }
+  .line{
+    /* display:none; */
+  }
+  .logo{
+    
+  }  
+  .nav_logo{
+    text-align: center; 
+    flex: 1; 
+  }
+  .profile_logo_content{
+    display: none;
+  }
+  .c_border{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .logo_hide{
+    display: none;
+  }
+  .full{
+    width:100%;
+  }
+  .social_text{
+    display: none;
+  }
+  .social{
+    display: block;
+  }
+  #resume, #contact{
+    text-align: center !important;
+    align-items: center !important;
+  }
+}
+
+
+.bk_img{
+  
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
