@@ -163,6 +163,7 @@ body, ul {
 
 
 .navbar {
+  height: 40px;
   background-color:white;
 }
 .navbar ul {
@@ -181,7 +182,9 @@ body, ul {
   background-color: #555;
 } */
 
-
+.my_name{
+  display: none;
+}
 @media only screen and (max-width:1200px){
   #nav_items{
     display: none;
@@ -214,6 +217,9 @@ body, ul {
 @media only screen and (max-width: 600px) {
   #nav_items{
     display: none;
+  }
+  .my_name{
+    display:contents;
   }
   .line{
     /* display:none; */
