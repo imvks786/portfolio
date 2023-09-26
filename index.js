@@ -5,7 +5,7 @@ const express = require('express');
 const path = require('path');
 const firebase = require('@firebase/app');
 const admin = require('firebase-admin');
-//const serviceAccount = require('./im-vks-firebase-adminsdk-eqwkh-532e5827d5.json');
+const serviceAccount = require('./im-vks-firebase-adminsdk-eqwkh-532e5827d5.json');
 const app = express();
 
 app.set('view engine', 'ejs');
@@ -29,7 +29,7 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 admin.initializeApp({
-    credential: admin.credential.cert(FIREBASE_KEY),
+    credential: admin.credential.cert(serviceAccount),
     databaseURL: 'https://im-vks-default-rtdb.firebaseio.com' // Replace with your database URL
 });
   
