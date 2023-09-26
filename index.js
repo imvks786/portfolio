@@ -1,7 +1,11 @@
+
 const http = require('http');
 const fs = require('fs');
 const express = require('express');
 const path = require('path');
+const firebase = require('@firebase/app');
+const admin = require('firebase-admin');
+const serviceAccount = require('./im-vks-firebase-adminsdk-eqwkh-532e5827d5.json');
 const app = express();
 
 app.set('view engine', 'ejs');
@@ -10,11 +14,26 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static("express"));
 app.use(express.static(__dirname + '/public'));
 
-const sqlite3 = require('sqlite3').verbose();
-const db = new sqlite3.Database('imvks.sqlite');
 
-// Create a table (if it doesn't exist)
-db.run(`CREATE TABLE IF NOT EXISTS formData (id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT,email TEXT,msg TEXT)`);
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyAErENpsTWdIXH6V7mfXlOZSGq4iuGvJ2A",
+  authDomain: "im-vks.firebaseapp.com",
+  databaseURL: "https://im-vks-default-rtdb.firebaseio.com",
+  projectId: "im-vks",
+  storageBucket: "im-vks.appspot.com",
+  messagingSenderId: "891861302410",
+  appId: "1:891861302410:web:970425c98ac48ccc878173",
+  measurementId: "G-GY2NWBE2GT"
+};
+firebase.initializeApp(firebaseConfig);
+
+admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount),
+    databaseURL: 'https://im-vks-default-rtdb.firebaseio.com' // Replace with your database URL
+});
+  
+const database = admin.database();
 
 
 app.get('/', (req, res) => {
@@ -44,33 +63,21 @@ app.get('/success', (req, res) => {
 
 //Handle form submissions
 app.post('/submit', (req, res) => {
-    // try {
-    //   const formData = req.body;
-    //   fs.writeFileSync('formData.json', JSON.stringify(formData, null, 2));
-    //   //res.send('Form data saved successfully!');
-    //   res.render('success');
-    // } catch (error) {
-    //   res.status(500).send('Error saving form data.');
-    // }
     const { yourname, email,msg } = req.body;
-    db.run('INSERT INTO formData (name, email,msg) VALUES (?, ?, ?)', [yourname, email, msg], (err) => {
-        if (err) {
-            return console.error(err.message);
-        }
-        console.log(`A row has been inserted with rowid ${this.lastID}`);
-        res.render('success');
+
+    // Push data to Firebase
+    const dataRef = database.ref('formData'); // 'formData' is the name of your data collection
+    const newDataRef = dataRef.push();
+    newDataRef.set({
+      name: yourname,
+      email: email,
+      message: msg
     });
+  
+    res.render('success');
 });
 
-process.on('SIGINT', () => {
-    db.close((err) => {
-        if (err) {
-            return console.error(err.message);
-        }
-        console.log('Closed the database connection.');
-        process.exit(0);
-    });
-});
+
 
 
 
