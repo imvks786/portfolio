@@ -188,13 +188,7 @@ body, ul {
 @media only screen and (max-width:1200px){
   #nav_items{
     display: none;
-  }
-  .line{
-    /* display:none; */
-  }
-  .logo{
-    
-  }  
+  } 
   .nav_logo{
     text-align: center; 
     flex: 1; 
@@ -221,12 +215,9 @@ body, ul {
   .my_name{
     display:contents;
   }
-  .line{
-    /* display:none; */
-  }
   .margin_cstm{
     margin-top: 20px;
-    margin-left: 20%; 
+    margin-left: 10%; 
   }  
   .nav_logo{
     text-align: center; 
