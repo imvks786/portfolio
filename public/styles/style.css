@@ -12,6 +12,12 @@
     opacity: 1;
   }
 }
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
 #alert {
   position: fixed;
   bottom: 20px;
