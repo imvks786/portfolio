@@ -46,6 +46,8 @@ app.get('/', (req, res) => {
     res.render('index', { pageTitle: 'Home Page' });
 });
 
+
+
 app.get('/home', (req, res) => {
     res.render('index');
 });
