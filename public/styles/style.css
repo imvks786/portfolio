@@ -273,3 +273,7 @@ body, ul {
   border: 2px #ccc solid;
   color: #fff;
 }
+
+.sc_h:hover{
+  color:green;
+}
